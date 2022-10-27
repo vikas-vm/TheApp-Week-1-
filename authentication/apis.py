@@ -2,14 +2,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import RegisterSerializer, LoginSerializer
-from rest_framework.permissions import AllowAny
-from rest_framework import generics
-from .models import User
 from django.contrib.auth import authenticate
-from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.tokens import RefreshToken, AccessToken
-from rest_framework import permissions
 
 
 class RegisterView(APIView):
